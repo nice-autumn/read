@@ -1,0 +1,42 @@
+{
+  "cloud":true,
+  "pages": [
+    "pages/index/index",
+    "pages/bookstore/bookstore",
+    "pages/listen/listen"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "微信读书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#7C7C84",
+    "selectedColor": "#399EE8",
+    "list":[
+      {
+      "pagePath": "pages/bookstore/bookstore",
+      "text": "书城",
+      "iconPath": "./images/book.png",
+      "selectedIconPath": "./images/select-book.png"
+      },
+      {
+        "pagePath": "pages/listen/listen",
+        "text": "听书",
+        "iconPath": "./images/listen.png",
+        "selectedIconPath": "./images/select-listen.png"
+        },
+        {
+          "pagePath": "pages/index/index",
+          "text": "我的",
+          "iconPath": "./images/mine.png",
+          "selectedIconPath": "./images/select-mine.png"
+          }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
