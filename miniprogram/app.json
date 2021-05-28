@@ -2,7 +2,7 @@
   "cloud":true,
   "pages": [
     "pages/index/index",
-    "pages/bookstore/bookstore",
+    "pages/book/book",
     "pages/listen/listen"
   ],
   "window": {
@@ -18,7 +18,7 @@
     "selectedColor": "#399EE8",
     "list":[
       {
-      "pagePath": "pages/bookstore/bookstore",
+      "pagePath": "pages/book/book",
       "text": "书城",
       "iconPath": "./images/book.png",
       "selectedIconPath": "./images/select-book.png"
@@ -37,6 +37,5 @@
           }
     ]
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "sitemapLocation": "sitemap.json"
 }

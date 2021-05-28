@@ -1,6 +1,2 @@
 <!--pages/listen/listen.wxml-->
-<view class="listen">
-  <view class="search"></view>
-   <input type="text " class="search-book" placeholder="搜索">
-
-</view>
+<text>pages/listen/listen.wxml</text>
