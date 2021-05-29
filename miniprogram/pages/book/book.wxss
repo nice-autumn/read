@@ -53,6 +53,7 @@
   top: 10rpx;
   width: 8rpx;
   height: 34rpx;
+  border-radius: 8rpx;
   background-color: #ffbb1b;
 }
 .rec-more{

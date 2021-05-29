@@ -1,0 +1,44 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+    <view class="det-nav">
+    <view class="det-first">
+      <view class="det-img">
+       <image src="{{content.coverUrl}}" mode="widthFix"></image>
+    </view>
+    <view class="nav-right">
+      <text class="nav-title">{{content.title}}</text>
+      <text>作者:{{content.authorName}}</text>
+      <text>{{content.categoryName}}/{{content.subCategoryName}}</text>
+      <text>最新:{{content.latestChapter}}</text>
+      <text>{{content.allWords}}字</text>
+    </view>
+    </view>
+    <view class="det-read">立即阅读</view>
+    <view class="check-con">
+      <view class="det-box"></view>
+      <text class="det-menu">查看目录</text>
+      <text>已完结</text>
+    </view>
+  <!-- 内容简介 -->
+    <view class="det-con">
+      <view class="det-box"></view>
+      <text class="con-intro">内容简介</text>
+      <view class="con-word">{{content.intro}}
+       <text class="det-more">展开更多</text>
+      </view>
+    </view>
+  </view>
+<!-- 热门书评 -->
+  <view class="det-hot">
+    <view class="det-box"></view>
+      <text class="con-intro">热门书评</text>
+      <view class="hot-comment" wx:for="{{comment}}" wx:key="index">
+        <view class="hot-img">
+          <image src="{{item.header}}" mode="widthFix"></image>
+           <text class="hot-user">{{item.nickname}} 读过</text>
+        </view>
+        <text class="hot-con">{{item.content}}</text>
+        <text class="hot-time">{{time.formatTime(item.time, 'h:m')}}</text>
+      </view>
+  </view>
+</view>

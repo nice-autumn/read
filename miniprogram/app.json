@@ -3,7 +3,8 @@
   "pages": [
     "pages/index/index",
     "pages/book/book",
-    "pages/listen/listen"
+    "pages/listen/listen",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundColor": "#ffffff",

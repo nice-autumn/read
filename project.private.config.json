@@ -29,6 +29,11 @@
           "pathName": "pages/book/book",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/detail/detail",
+          "pathName": "pages/detail/detail",
+          "scene": null
         }
       ]
     }

@@ -1,0 +1,109 @@
+/* pages/detail/detail.wxss */
+.detail{
+  height: 100%;
+}
+.det-nav{
+  background-color: #fff;
+}
+.det-first{
+  display: flex;
+  padding: 20rpx 30rpx;
+}
+.det-nav image{
+  width: 190rpx;
+}
+.nav-right text{
+  padding: 8rpx 20rpx;
+  display:block;
+  font-size: 30rpx;
+  color: #999;
+}
+.nav-right .nav-title{
+  color: #000;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.det-read{
+  width: 600rpx;
+  margin:0 auto;
+  margin-bottom: 30rpx;
+  font-size: 32rpx;
+  text-align: center;
+  padding: 20rpx 40rpx;
+  border-radius: 10rpx;
+  background-color: #ffbb1b;
+}
+.check-con{
+  padding: 30rpx 0;
+  font-size: 32rpx;
+  color: #999;
+  border-top: 1px solid rgba(238, 238, 238, 0.562);
+
+}
+.det-box{
+  float: left;
+  position: relative;
+  top: 10rpx;
+  left: 10rpx;
+  width: 8rpx;
+  height: 34rpx;
+  border-radius: 8rpx;
+  background-color: #ffbb1b;
+}
+.det-menu{
+  color: #000;
+  font-size: 34rpx;
+  padding: 0 30rpx 0 20rpx;
+}
+.det-con{
+  margin-top: 20rpx;
+  padding-top:20rpx;
+  background-color: #fff;
+}
+.con-intro{
+  display: block;
+  margin-left: 30rpx;
+  font-size: 34rpx;
+}
+.con-word{
+  display: block;
+  font-size: 30rpx;
+  color: #999;
+  padding: 30rpx;
+  line-height: 50rpx;
+}
+.det-more{
+  font-size: 30rpx;
+  color: #1ba1ff;
+}
+/* 热门书评 */
+.det-hot{
+  margin-top: 20rpx;
+  padding: 20rpx 0;
+  background-color: #fff;
+}
+.hot-comment{
+  font-size: 30rpx;
+  margin: 20rpx;
+  padding-bottom:30rpx ;
+  border-bottom:1px solid #eee;
+}
+.hot-img image{
+  width: 17px;
+  border-radius: 50%;
+}
+.hot-user{
+  color: #a16400;
+  margin-left: 16rpx;
+  position: relative;
+  top: -3px;
+}
+.hot-con{
+  display: block;
+  color: #666;
+  padding: 20rpx 0;
+}
+.hot-time{
+  color: #999;
+}
+
