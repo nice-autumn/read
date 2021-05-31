@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/book/book",
     "pages/listen/listen",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/novel/novel"
   ],
   "window": {
     "backgroundColor": "#ffffff",

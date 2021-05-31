@@ -1,0 +1,52 @@
+/* pages/novel/novel.wxss */
+.novel{
+  background-color:#F0EBE2 ;
+}
+.nov-title{
+   width: 100%;
+  display: inline-block;
+  margin-top: 50rpx;
+  text-align: center;
+  font-size: 60rpx;
+}
+.nov-content{
+  display: block;
+  padding: 60rpx 40rpx;
+}
+.chapter{
+  display: flex;
+  justify-content: space-between;
+  padding:50rpx 0;
+  margin: 0 40rpx;
+  border-top: 1px solid #fff;
+}
+.prev{
+  display: flex;
+  color: #666;
+  font-size: 32rpx;
+  text-align: center;
+  align-items: center;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  border: 1px solid #999;
+  background-color: #fff;
+}
+.nov-img image{
+  width: 42rpx;
+  position: relative;
+  top: 8rpx;
+  right: 10rpx;
+}
+.next{
+  display: flex;
+  color: #666;
+  font-size: 32rpx;
+  text-align: center;
+  align-items: center;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  border: 1px solid #999;
+  background-color: #fff;
+}

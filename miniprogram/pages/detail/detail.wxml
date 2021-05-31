@@ -13,7 +13,7 @@
       <text>{{content.allWords}}字</text>
     </view>
     </view>
-    <view class="det-read">立即阅读</view>
+    <navigator class="det-read" open-type="navigate" url="{{'../novel/novel?sourceName='+content.sourceName+'&sourceId='+content.sourceId}}">立即阅读</navigator>
     <view class="check-con">
       <view class="det-box"></view>
       <text class="det-menu">查看目录</text>
@@ -38,7 +38,7 @@
            <text class="hot-user">{{item.nickname}} 读过</text>
         </view>
         <text class="hot-con">{{item.content}}</text>
-        <text class="hot-time">{{time.formatTime(item.time, 'h:m')}}</text>
+        <text class="hot-time">{{item.times}}</text>
       </view>
   </view>
 </view>
