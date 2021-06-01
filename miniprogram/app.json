@@ -1,11 +1,12 @@
 {
   "cloud":true,
   "pages": [
-    "pages/index/index",
     "pages/book/book",
+    "pages/index/index",
     "pages/listen/listen",
     "pages/detail/detail",
-    "pages/novel/novel"
+    "pages/novel/novel",
+    "pages/menu/menu"
   ],
   "window": {
     "backgroundColor": "#ffffff",

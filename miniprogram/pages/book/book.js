@@ -24,7 +24,6 @@ Page({
     },
     methods:'GET',
     success(res){
-      console.log(res.data.data.channelList);
       let list=res.data.data.channelList
       for(var i=0;i<list.length;i++){
         if(list[i].mcid==6){

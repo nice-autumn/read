@@ -53,11 +53,21 @@
 .det-menu{
   color: #000;
   font-size: 34rpx;
-  padding: 0 30rpx 0 20rpx;
+  padding: 0 20rpx 0 30rpx;
+}
+.det-menu text{
+  display:inline-block;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+  color: #666;
+}
+.gray{
+  width: 100%;
+  height: 20rpx;
+  margin-top: 20rpx;
+  background-color: #f6f6f6;
 }
 .det-con{
-  margin-top: 20rpx;
-  padding-top:20rpx;
   background-color: #fff;
 }
 .con-intro{

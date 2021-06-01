@@ -16,8 +16,10 @@
     <navigator class="det-read" open-type="navigate" url="{{'../novel/novel?sourceName='+content.sourceName+'&sourceId='+content.sourceId}}">立即阅读</navigator>
     <view class="check-con">
       <view class="det-box"></view>
-      <text class="det-menu">查看目录</text>
-      <text>已完结</text>
+      <navigator class="det-menu" open-type="navigate" url="{{'../menu/menu?sourceName='+content.sourceName+'&sourceId='+content.sourceId}}">查看目录
+        <text>已完结</text>
+      </navigator>
+      <view class="gray"></view>
     </view>
   <!-- 内容简介 -->
     <view class="det-con">

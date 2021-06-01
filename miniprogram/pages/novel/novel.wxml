@@ -1,29 +1,25 @@
 <!--pages/novel/novel.wxml-->
 <view class="novel">
-  <text class="nov-title" >"第一章"</text>
-  <text class="nov-content">"　　“莫小姐，这个忙不是我不帮你，实在是无能无力，你大哥发生那件事以后，莫氏的股票连续跌停，到现在，还有一堆烂尾工
-
-。
-　　“你去哪儿？”
-　　顾奕辰看见她的动作，微微蹙了蹙眉。"</text>
+  <text class="nov-title" >{{novel.chapterTitle}}</text>
+  <text class="nov-content">{{novel.content}}</text>
 <view class="chapter">
  <view class="prev">
   <view class="nov-img">
     <image src="../../images/left.png" mode="widthFix"></image>
   </view> 
-  <text>上一章</text>
+  <text bindtap="prev">上一章</text>
   </view>
  <view class="prev">
   <view class="nov-img">
-    <image src="../../images/menu.png" mode="widthFix"></image>
+    <image class="menu-img" src="../../images/menu.png" mode="widthFix"></image>
   </view>  
-  <text>目录</text>
+  <navigator class="menu" open-type="navigate" url="{{'../menu/menu?sourceName='+novel.sourceName+'&sourceId='+novel.sourceId+'&chapterId='+novel.chapterId}}">目录</navigator>
 </view>
- <view class="next">
+ <view class="prev next">
+   <text bindtap="next">下一章</text>
   <view class="nov-img">
     <image src="../../images/arrow.png" mode="widthFix"></image>
   </view>  
-  <text>下一章</text>
   </view>
 </view>
 </view>

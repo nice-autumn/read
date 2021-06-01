@@ -1,51 +1,40 @@
-// pages/detail/detail.js
-var time = require('../../utils/utils.js');
-var that = ''
-
+// pages/menu/menu.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   content:[],
-   comment:[],
-   times:[],
+    names:'',
+    id:'',
+    id1:'',
+    id2:'',
+    section:[],
+    chapter:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    that=this
+    var that=this
+    that.setData({
+      names:options.sourceName,
+      id:options.sourceId,
+      id1:options.chapterId,
+    })
+   this.getMenu()
+  },
+  getMenu(){
+    var that=this
     wx.request({
-      url: 'http://m.taoyuewenhua.com/ajax/book?sourceName='+options.sourceName+
-      '&sourceId='+options.sourceId,
+      url: 'http://m.taoyuewenhua.com/ajax/chapters?sourceName='+that.data.names+
+      '&sourceId='+that.data.id+'&chapterId='+that.data.id1,
       method:'GET',
       success(res){
         that.setData({
-          content:res.data.data
-        })
-      },
-      fail(err){
-        console.log(err);
-      }
-    }),
-    wx.request({
-      url: 'http://m.taoyuewenhua.com/ajax/top_comments?sourceName='+options.sourceName+
-      '&sourceId='+options.sourceId,
-      method:'GET',
-      success(res){
-        let times= []
-        that.setData({
-          comment:res.data.data,
-        })
-        for(var i=0;i<that.data.comment.length;i++){
-          // times.push( time.formatTime(that.data.comment[i].createdOn, 'h:m'))
-          that.data.comment[i].times = time.formatTime(that.data.comment[i].createdOn, 'h:m')
-        }
-        that.setData({
-          comment:that.data.comment
+         section:res.data.data,
+         chapter:res.data.data.chapters
         })
       },
       fail(err){
@@ -53,7 +42,19 @@ Page({
       }
     })
   },
- 
+    getChapter: function(e){
+      console.log(e.currentTarget.dataset.id);
+      var that=this
+      let i=e.currentTarget.dataset.id
+      that.setData({
+        id2:that.data.chapter[i].chapterId
+      })
+      this.getMenu(that.data.id2)
+      wx.navigateTo({
+        url: '../novel/novel?sourceName='+that.data.names+
+        '&sourceId='+that.data.id+'&chapterId='+that.data.id2,
+      })
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -5,22 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-  novel:[]
+  novel:[],
+  id:'',
+  names:'',
+  chapter:'',
+  sort:'',
+  section:[],
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     var that=this
+    this.setData({
+     id:options.sourceId,
+     names:options.sourceName,
+    })
+    this.getData(options.chapterId)
+  },
+  getData(id = ''){
+    var that=this
     wx.request({
-      url: 'http://m.taoyuewenhua.com/ajax/chapter_content?sourceName='+options.sourceName+
-      '&sourceId='+options.sourceId,
+      url: 'http://m.taoyuewenhua.com/ajax/chapter_content?sourceName='+that.data.names+
+      '&sourceId='+that.data.id+'&chapterId='+id,
       method:'GET',
       success(res){
-        console.log(res.data.data);
         that.setData({
-          novel:res.data.data
+          novel:res.data.data,
+          chapter:res.data.data.chapterId,
+          sort:res.data.data.chapterSort
         })
       },
       fail(err){
@@ -28,6 +40,27 @@ Page({
       }
     })
   },
+prev(){
+  var that=this
+ if(that.data.sort!=0){
+  that.setData({
+    chapter:that.data.novel.prevChapterId
+  })
+  this.getData(that.data.chapter)
+  }else{ 
+    wx.showToast({
+      title: '当前已经是第一章',
+      icon:'none'
+    })
+ }
+},
+next(){
+  var that=this
+  that.setData({
+    chapter:that.data.novel.nextChapterId
+  })
+  this.getData(that.data.chapter)
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

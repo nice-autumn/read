@@ -1,0 +1,12 @@
+<!--pages/menu/menu.wxml-->
+<view class="chapter">
+  <view class="cha-nav">
+    <text class="total">共{{section.chapterSize}}章</text>
+    <text class="cha-title">{{section.bookTitle}}</text>
+  </view>
+ 
+  <view class="chap-list" wx:for="{{section.chapters}}" wx:key="index">
+    <text class="list-title" bindtap="getChapter" data-id="{{index}}" >{{item.chapterTitle}}</text>
+  </view>
+</view>
+
