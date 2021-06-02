@@ -1,0 +1,20 @@
+<!--pages/add/add.wxml-->
+<view class="cloud">
+   书名
+   <input placeholder="输入书名" auto-focus type="text" bindinput="bindKeyInput" value="{{msg}}"/> 
+  <!-- <view class="title" wx:for="{{lists}}" wx:key="index">{{item.title}}</view>
+   -->
+  作者
+  <input placeholder="输入作者" auto-focus type="text" bindinput="bindauthorInput" value="{{msg1}}"/> 
+  people
+   <input placeholder="输入人数" auto-focus type="text" bindinput="bindpeopleInput" value="{{msg2}}"/> 
+   tab
+   <input placeholder="输入分类" auto-focus type="text" bindinput="bindtabInput" value="{{tabs}}"/> 
+   images
+   <input placeholder="输入图片" auto-focus type="text" bindinput="bindimgInput" value="{{imgs}}"/> 
+   内容
+   <input placeholder="输入文章" auto-focus type="text" bindinput="bindconInput" value="{{content}}"/> 
+</view>
+<button type="primary" bindtap="add">添加数据</button>
+<button type="default" plain="true" bindtap="change">修改数据</button>
+<button type="warn" plain="true" bindtap="del">删除数据</button>

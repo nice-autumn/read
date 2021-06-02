@@ -1,2 +1,19 @@
 <!--pages/listen/listen.wxml-->
-<text>pages/listen/listen.wxml</text>
+<view class="listen">
+  <book-search></book-search>
+  <view class="lis-content">
+    <view class="lis-title">影视热门榜</view>
+    <view class="lis-lists">
+      <view class="video">
+        <view class="video-img">
+          <image src="https://wfqqreader-1252317822.image.myqcloud.com/cover/11/38240011/t6_38240011.jpg" mode="widthFix"></image>
+        </view>
+        <view class="video-title">
+          <text class="names">生命的探问：弗兰克尔谈生命的意义与价值</text>
+          <text class="author">维克多·E.弗兰克尔 | 讲书人:企鹅有声 </text>
+          <text class="people">70人今日在听</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

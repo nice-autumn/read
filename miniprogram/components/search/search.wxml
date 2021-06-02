@@ -1,0 +1,5 @@
+<!--components/search/search.wxml-->
+<view class="search">
+        <image src="../../images/search.png" ></image>
+        <input type="text " class="search-book" placeholder="搜索"placeholder-class="placeholderStyle" />
+      </view>

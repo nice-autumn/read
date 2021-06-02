@@ -45,6 +45,18 @@
         {
           "name": "pages/menu/menu",
           "pathName": "pages/menu/menu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/listen/listen",
+          "pathName": "pages/listen/listen",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/add/add",
+          "pathName": "pages/add/add",
           "scene": null
         }
       ]

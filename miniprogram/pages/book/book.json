@@ -2,6 +2,8 @@
   "usingComponents": {
     "van-sticky": "@vant/weapp/sticky/index",
     "van-tab": "@vant/weapp/tab/index",
-    "van-tabs": "@vant/weapp/tabs/index"
+    "van-tabs": "@vant/weapp/tabs/index",
+    "book-search":"../../components/search/search",
+    "book-recomment":"../../components/recomment/recomment"
   }
 }

@@ -1,0 +1,9 @@
+/* pages/add/add.wxss */
+.cloud{
+  width: 100%;
+  border: 1px solid #000;
+  background-color: antiquewhite;
+}
+.title{
+  border-bottom:1px dashed #000;
+}

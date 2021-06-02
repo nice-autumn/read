@@ -14,6 +14,8 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      baseURL:"http://m.taoyuewenhua.com"
+    }
   }
 })

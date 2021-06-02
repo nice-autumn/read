@@ -1,93 +1,14 @@
 <!--pages/listen/listen.wxml-->
 <view class="listen">
-      <view class="search">
+      <!-- <view class="search">
         <image src="../../images/search.png" ></image>
         <input type="text " class="search-book" placeholder="搜索"placeholder-class="placeholderStyle" />
-      </view>
+      </view> -->
+      <book-search></book-search>
         <!-- tab切换 -->
         <van-tabs active="{{ active }}" bind:change="onChange" type="none" sticky="true"> 
           <van-tab title="推荐">
-            <view class="recommend" >
-              <!--重磅推荐 -->
-              <view class="rec-nav">
-                  <view class="rec-type">
-                     <view class="rec-box"></view>
-                     <text>重磅推荐</text>
-                  </view>
-                  <view class="rec-more">查看更多
-                    <image src="../../images/arrow.png" mode="widthFix"></image>
-                  </view>
-                </view>  
-              <navigator class="rec-con" wx:for="{{lists1}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
-                <view class="rec-img">
-                  <image src="{{item.coverUrl}}" mode="widthFix"></image>
-                </view>
-                <view class="rec-right">
-                  <text class="title">{{item.title}}</text>
-                  <view class="word">{{item.intro}}</view>
-                  <view class="author">
-                    <text>{{item.authorName}}</text>
-                    <view class="continue">
-                      <text class="story1">完结</text>
-                      <text class="ancient">{{item.categoryName}}</text>
-                    </view>
-                  </view>
-                </view>
-              </navigator>
-              <!-- 潜力新书 -->
-              <view class="rec-nav">
-                  <view class="rec-type">
-                     <view class="rec-box"></view>
-                     <text>潜力新书</text>
-                  </view>
-                  <view class="rec-more">查看更多
-                    <image src="../../images/arrow.png" mode="widthFix"></image>
-                  </view>
-                </view>  
-              <navigator class="rec-con" wx:for="{{lists2}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
-                <view class="rec-img">
-                  <image src="{{item.coverUrl}}" mode="widthFix"></image>
-                </view>
-                <view class="rec-right">
-                  <text class="title">{{item.title}}</text>
-                  <view class="word">{{item.intro}}</view>
-                  <view class="author">
-                    <text>{{item.authorName}}</text>
-                    <view class="continue">
-                      <text class="story1">完结</text>
-                      <text class="ancient">{{item.categoryName}}</text>
-                    </view>
-                  </view>
-                </view>
-              </navigator>
-              <!-- 女生精选 -->
-              <view class="rec-nav">
-                  <view class="rec-type">
-                     <view class="rec-box"></view>
-                     <text>女生精选</text>
-                  </view>
-                  <view class="rec-more">查看更多
-                    <image src="../../images/arrow.png" mode="widthFix"></image>
-                  </view>
-                </view>  
-              <navigator class="rec-con" wx:for="{{lists3}}" wx:key="index"  open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
-                <view class="rec-img">
-                  <image src="{{item.coverUrl}}" mode="widthFix"></image>
-                </view>
-                <view class="rec-right">
-                  <text class="title">{{item.title}}</text>
-                  <view class="word">{{item.intro}}</view>
-                  <view class="author">
-                    <text>{{item.authorName}}</text>
-                    <view class="continue">
-                      <text class="story">连载</text>
-                      <text class="ancient">{{item.categoryName}}</text>
-                    </view>
-                  </view>
-                </view>
-              </navigator>
-            </view>
-
+            <book-recomment  listsRec="{{lists1}}" listsNew="{{lists2}}" listsGirl="{{lists3}}"></book-recomment>
           </van-tab>
           <van-tab title="新书">
             

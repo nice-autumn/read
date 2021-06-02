@@ -1,5 +1,5 @@
-<!--components/readlist/readlist.wxml-->
-       <view class="recommend" >
+<!--components/recomment/recomment.wxml-->
+<view class="recommend" >
               <!--重磅推荐 -->
               <view class="rec-nav">
                   <view class="rec-type">
@@ -10,7 +10,7 @@
                     <image src="../../images/arrow.png" mode="widthFix"></image>
                   </view>
                 </view>  
-              <view class="rec-con" wx:for="{{books}}" wx:key="index">
+              <navigator class="rec-con" wx:for="{{listsRec}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
                 <view class="rec-img">
                   <image src="{{item.coverUrl}}" mode="widthFix"></image>
                 </view>
@@ -25,7 +25,7 @@
                     </view>
                   </view>
                 </view>
-              </view>
+              </navigator>
               <!-- 潜力新书 -->
               <view class="rec-nav">
                   <view class="rec-type">
@@ -36,7 +36,7 @@
                     <image src="../../images/arrow.png" mode="widthFix"></image>
                   </view>
                 </view>  
-              <view class="rec-con" wx:for="{{lists2}}" wx:key="index">
+              <navigator class="rec-con" wx:for="{{listsNew}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
                 <view class="rec-img">
                   <image src="{{item.coverUrl}}" mode="widthFix"></image>
                 </view>
@@ -51,7 +51,7 @@
                     </view>
                   </view>
                 </view>
-              </view>
+              </navigator>
               <!-- 女生精选 -->
               <view class="rec-nav">
                   <view class="rec-type">
@@ -62,7 +62,7 @@
                     <image src="../../images/arrow.png" mode="widthFix"></image>
                   </view>
                 </view>  
-              <view class="rec-con" wx:for="{{lists3}}" wx:key="index">
+              <navigator class="rec-con" wx:for="{{listsGirl}}" wx:key="index"  open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
                 <view class="rec-img">
                   <image src="{{item.coverUrl}}" mode="widthFix"></image>
                 </view>
@@ -77,5 +77,5 @@
                     </view>
                   </view>
                 </view>
-              </view>
+              </navigator>
             </view>

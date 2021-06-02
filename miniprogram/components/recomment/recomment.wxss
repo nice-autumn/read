@@ -1,4 +1,4 @@
-/* components/readlist/readlist.wxss */
+/* components/recomment/recomment.wxss */
 /* 标题 */
 .rec-nav{
   margin-top: 30rpx;
@@ -20,6 +20,7 @@
   top: 10rpx;
   width: 8rpx;
   height: 34rpx;
+  border-radius: 8rpx;
   background-color: #ffbb1b;
 }
 .rec-more{
@@ -33,6 +34,7 @@
   width: 28rpx;
 }
 /* 列表 */
+
 .recommend{
   margin-top: -16rpx;
 }

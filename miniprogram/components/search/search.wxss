@@ -1,0 +1,25 @@
+/* components/search/search.wxss */
+.search{
+  width: 600rpx;
+  margin: 30rpx auto;
+  position: relative;
+  border-radius: 40rpx;
+  padding:20rpx 40rpx;
+   background-color: #F6F7F9;
+}
+.search image{
+  position: absolute;
+  top: 30rpx;
+  left: 40rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.search-book{
+  margin-left: 60rpx;
+  font-size: 38rpx;
+  color: #999;
+  font-weight: 300;
+}
+.placeholderStyle{
+  color: #999;
+}

@@ -1,1 +1,43 @@
 /* pages/listen/listen.wxss */
+.listen{
+  background-color: #fff;
+}
+.lis-content{
+  padding: 0 40rpx;
+}
+.lis-title{
+  font-size: 40rpx;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.video{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.video-img image{
+  width: 140rpx;
+}
+.video-title{
+  padding: 0 20rpx;
+   width: 80%;
+}
+.video-title text{
+  display: block;
+  line-height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.video-title  .names{
+  font-size: 34rpx;
+  font-weight:bold;
+}
+.video-title .author{
+  font-size: 30rpx;
+  color: rgb(160, 158, 158);
+}
+.video-title .people{
+  font-size: 28rpx;
+  color: rgb(207, 204, 204);
+}

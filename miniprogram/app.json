@@ -6,7 +6,8 @@
     "pages/listen/listen",
     "pages/detail/detail",
     "pages/novel/novel",
-    "pages/menu/menu"
+    "pages/menu/menu",
+    "pages/add/add"
   ],
   "window": {
     "backgroundColor": "#ffffff",

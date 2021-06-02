@@ -1,10 +1,18 @@
-// components/readlist/readlist.js
+// components/recomment/recomment.js
 Component({
   /**
    * 组件的属性列表
    */
-  properties: { 
-  
+  properties: {
+   listsRec:{
+     type: Object
+   },
+   listsNew:{
+     type:Object
+   },
+   listsGirl:{
+     type:Object
+   }
   },
 
   /**
