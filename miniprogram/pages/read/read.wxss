@@ -1,0 +1,90 @@
+/* pages/read/read.wxss */
+.read{
+  background-color: #fff;
+}
+.read-img{
+  width: 300rpx;
+  margin: 30rpx auto;
+}
+.read-img image{
+  width: 300rpx;
+}
+.read-title{
+  text-align: center;
+  display: block;
+  font-size: 34rpx;
+  color: #666;
+}
+.read-chap{
+  display: block;
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 38rpx;
+}
+.read-len{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx;
+  overflow: hidden;
+}
+.read-len .time{
+  font-size: 36rpx;
+  color: rgb(129, 127, 127);
+}
+.read-line{
+  position: absolute;
+  left: 120rpx;
+  top: 54rpx;
+  width: 65%;
+  height: 4rpx;
+  background-color: #eee;
+}
+.read-btn{
+  position: absolute;
+  left: 124rpx;
+  top: 24rpx;
+  width: 240rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #666;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 40rpx;
+  background-color: #fff;
+}
+.read-close{
+  display: flex;
+  justify-content: space-between;
+  padding:40rpx 30rpx;
+}
+.read-close image{
+  width: 60rpx;
+}
+.read-close .clock text{
+  display: block;
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+}
+.read-close .clock image{
+  margin-left: 26rpx;
+}
+.read-close .play{
+  margin-top: -38rpx;
+  width: 150rpx;
+}
+.read-in{
+  display: flex;
+  padding: 0 0 60rpx 0;
+  margin-left: 150rpx;
+}
+.read-in .e-book{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+  color: #666;
+  padding: 20rpx 30rpx;
+  border: 1px solid #eee;
+  border-radius: 40rpx;
+}

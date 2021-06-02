@@ -1,0 +1,35 @@
+<!--pages/read/read.wxml-->
+<view class="read">
+  <view class="read-img">
+    <image src="https://img2.doubanio.com/view/subject/s/public/s33879441.jpg" mode="widthFix"></image>
+  </view>
+    <text class="read-title">绿色的夜</text>
+    <text class="read-chap">第一章 晓钟圣歌</text>
+    <view class="read-plan">
+      <!-- 进度条 -->
+      <view class="read-len">
+        <view class="time">-15s</view>
+        <view class="read-line"></view>
+        <view class="read-btn">00:00/11:55</view>
+        <view class="time">+15s</view>
+      </view>
+      <view class="read-bot">
+        <view class="read-close">
+          <view class="clock">
+             <image src="../../images/clock.png" mode="widthFix"></image>
+             <text>定时关闭</text>
+          </view>
+          <image src="../../images/last.png" mode="widthFix"></image>
+          <image class="play" src="../../images/play.png" mode="widthFix"></image>
+          <image src="../../images/next.png" mode="widthFix"></image>
+          <view class="more">
+             <image src="../../images/more.png" mode="widthFix"></image>
+          </view>
+        </view>
+        <view class="read-in">
+          <view class="e-book">加入书架</view>
+          <view class="e-book">阅读电子书</view>
+        </view>
+      </view>
+    </view> 
+</view>

@@ -57,6 +57,12 @@
         {
           "name": "pages/add/add",
           "pathName": "pages/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/read/read",
+          "pathName": "pages/read/read",
           "scene": null
         }
       ]
