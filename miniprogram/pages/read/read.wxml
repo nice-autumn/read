@@ -1,10 +1,12 @@
 <!--pages/read/read.wxml-->
-<view class="read">
-  <view class="read-img">
-    <image src="https://img2.doubanio.com/view/subject/s/public/s33879441.jpg" mode="widthFix"></image>
+<view class="read" >
+  <view wx:for="{{contents}}" wx:key="index"> 
+    <view class="read-img">
+    <image src="{{item.imgs}}" mode="widthFix"></image>
   </view>
-    <text class="read-title">绿色的夜</text>
-    <text class="read-chap">第一章 晓钟圣歌</text>
+    <text class="read-title">{{item.title}}</text>
+  </view>
+   
     <view class="read-plan">
       <!-- 进度条 -->
       <view class="read-len">
@@ -20,7 +22,8 @@
              <text>定时关闭</text>
           </view>
           <image src="../../images/last.png" mode="widthFix"></image>
-          <image class="play" src="../../images/play.png" mode="widthFix"></image>
+          <image class="{{show1?'play active':'play'}}" src="../../images/play.png" bindtap="end" mode="widthFix"></image>
+          <image class="{{show2?'play active':'play'}}" src="../../images/pause.png" bindtap="wordYun" mode="widthFix"></image>
           <image src="../../images/next.png" mode="widthFix"></image>
           <view class="more">
              <image src="../../images/more.png" mode="widthFix"></image>
@@ -29,6 +32,9 @@
         <view class="read-in">
           <view class="e-book">加入书架</view>
           <view class="e-book">阅读电子书</view>
+        </view>
+        <view class="comment">
+          <hot-comment></hot-comment>
         </view>
       </view>
     </view> 

@@ -63,6 +63,19 @@
         {
           "name": "pages/read/read",
           "pathName": "pages/read/read",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/newbook/newbook",
+          "pathName": "pages/newbook/newbook",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "components/classify/classify",
+          "pathName": "components/classify/classify",
+          "query": "",
           "scene": null
         }
       ]

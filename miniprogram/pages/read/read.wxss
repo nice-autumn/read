@@ -12,7 +12,7 @@
 .read-title{
   text-align: center;
   display: block;
-  font-size: 34rpx;
+  font-size: 38rpx;
   color: #666;
 }
 .read-chap{
@@ -73,7 +73,11 @@
 }
 .read-close .play{
   margin-top: -38rpx;
-  width: 150rpx;
+  width: 120rpx;
+  display: none;
+}
+.read-close .active{
+  display: block;
 }
 .read-in{
   display: flex;

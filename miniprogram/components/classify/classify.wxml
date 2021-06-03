@@ -1,0 +1,10 @@
+<!--components/classify/classify.wxml-->
+<view class="classify">
+  <view class="cla-list">
+    <view class="cla-left">
+      <text class="cla-title">精品小说榜</text>
+      <text class="cla-book">1.麻衣相师</text>
+    </view>
+    <image src="https://img1.doubanio.com/view/subject/s/public/s33667317.jpg" mode="widthFix"></image>
+  </view>
+</view>

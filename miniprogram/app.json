@@ -1,5 +1,4 @@
 {
-  "cloud":true,
   "pages": [
     "pages/book/book",
     "pages/index/index",
@@ -42,5 +41,11 @@
           }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
 }

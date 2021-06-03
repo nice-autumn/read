@@ -1,2 +1,25 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="mine">
+  <view class="mine-nav">
+    <view class="mine-box">
+      <block wx:if="{{userInfo}}">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      <text>{{userInfo.nickName}}</text>
+    </block>
+    <block wx:else>
+      <image src="../../images/login.jpg" mode="widthFix"></image>
+      <text class="login" bindtap="getUserProfile">点击登录</text>
+    </block>
+    </view>
+  </view>
+  <view class="login-box">
+    <view class="login-list" wx:if="{{userInfo}}">
+      <text class="page">我的消息</text>
+      <image src="../../images/arrow.png" mode="widthFix"></image>
+    </view>
+    <view class="login-list">
+      <text class="page">联系我们</text>
+      <image src="../../images/arrow.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>

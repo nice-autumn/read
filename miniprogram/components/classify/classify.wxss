@@ -1,0 +1,30 @@
+/* components/classify/classify.wxss */
+.classify{
+  background-color: #fff;
+}
+.cla-list{
+  display: flex;
+  justify-content: space-between;
+  margin: 40rpx;
+  border: 1px solid #eee;
+  border-radius: 40rpx;
+  background-color: #F8F8FA;
+}
+.cla-left{
+  margin: 40rpx;
+}
+.cla-list .cla-left text{
+  display: block;
+  line-height: 60rpx;
+}
+.cla-title{
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.cla-book{
+  font-size: 30rpx;
+  color: #999;
+}
+.cla-list image{
+  width: 200rpx;
+}

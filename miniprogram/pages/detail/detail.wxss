@@ -86,34 +86,3 @@
   font-size: 30rpx;
   color: #1ba1ff;
 }
-/* 热门书评 */
-.det-hot{
-  margin-top: 20rpx;
-  padding: 20rpx 0;
-  background-color: #fff;
-}
-.hot-comment{
-  font-size: 30rpx;
-  margin: 20rpx;
-  padding-bottom:30rpx ;
-  border-bottom:1px solid #eee;
-}
-.hot-img image{
-  width: 17px;
-  border-radius: 50%;
-}
-.hot-user{
-  color: #a16400;
-  margin-left: 16rpx;
-  position: relative;
-  top: -3px;
-}
-.hot-con{
-  display: block;
-  color: #666;
-  padding: 20rpx 0;
-}
-.hot-time{
-  color: #999;
-}
-

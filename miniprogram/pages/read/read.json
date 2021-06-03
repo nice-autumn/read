@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "hot-comment":"../../components/comment/comment"
+  }
 }

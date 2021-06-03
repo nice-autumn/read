@@ -8,6 +8,7 @@
 .lis-title{
   font-size: 40rpx;
   font-weight: bold;
+  margin-top: 20rpx;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .video{
@@ -15,16 +16,26 @@
   justify-content: space-between;
   margin-top: 30rpx;
 }
+.video-img{
+  position: relative;
+}
 .video-img image{
   width: 140rpx;
 }
+.video-img .img-play{
+  position: absolute;
+  top: 50rpx;
+  left: 30rpx;
+  width: 80rpx;
+  opacity: .7;
+}
 .video-title{
-  padding: 0 20rpx;
+  padding:0 20rpx;
    width: 80%;
 }
 .video-title text{
   display: block;
-  line-height: 60rpx;
+  line-height: 70rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

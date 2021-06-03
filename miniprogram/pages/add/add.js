@@ -8,7 +8,7 @@ Page({
   data: {
     msg:'',
     msg1:'',
-    mag2:'',
+    msg2:'',
      list:[],
      tabs:'',
      imgs:'',
@@ -94,8 +94,10 @@ bindconInput(e){
         content:that.data.content
       }
     }).then(res=>{
+      that.onLoad()
       console.log('添加成功');
     })
+    
   },
   change(){
     var that=this

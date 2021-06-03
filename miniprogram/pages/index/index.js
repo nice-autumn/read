@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: null
   },
 
   /**
@@ -14,7 +14,21 @@ Page({
   onLoad: function (options) {
 
   },
-
+  getUserProfile(e) {
+   console.log('00000');
+  wx.getUserProfile({
+    desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+    success: (res) => {
+      console.log(res)
+      this.setData({
+        userInfo: res.userInfo,
+        hasUserInfo: true
+      })
+       console.log(this.data.userInfo.length)
+      }
+    }) 
+    
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -18,7 +18,7 @@ Page({
   onLoad: function (options) {
     this.setData({
      id:options.sourceId,
-     names:options.sourceName,
+     names:options.sourceName
     })
     this.getData(options.chapterId)
   },
@@ -66,14 +66,12 @@ next(){
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**

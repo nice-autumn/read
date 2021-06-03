@@ -31,16 +31,5 @@
     </view>
   </view>
 <!-- 热门书评 -->
-  <view class="det-hot">
-    <view class="det-box"></view>
-      <text class="con-intro">热门书评</text>
-      <view class="hot-comment" wx:for="{{comment}}" wx:key="index">
-        <view class="hot-img">
-          <image src="{{item.header}}" mode="widthFix"></image>
-           <text class="hot-user">{{item.nickname}} 读过</text>
-        </view>
-        <text class="hot-con">{{item.content}}</text>
-        <text class="hot-time">{{item.times}}</text>
-      </view>
-  </view>
+  <hot-comment discuss="{{comment}}"></hot-comment>
 </view>
