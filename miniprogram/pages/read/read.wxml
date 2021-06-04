@@ -19,7 +19,7 @@
         <view class="read-close">
           <view class="clock">
              <image src="../../images/clock.png" mode="widthFix"></image>
-             <text>定时关闭</text>
+             <!-- <text>定时关闭</text> -->
           </view>
           <image src="../../images/last.png" mode="widthFix"></image>
           <image class="{{show1?'play active':'play'}}" src="../../images/play.png" bindtap="end" mode="widthFix"></image>

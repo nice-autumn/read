@@ -1,0 +1,39 @@
+<!--components/rank/rank.wxml-->
+<view class="rank">
+  <!-- 飙升 -->
+  <view class="rank-up white">
+    <image src="../../images/up.png" mode="widthFix"></image>
+    <view class="rank-list"  wx:for="{{rank1}}" wx:key="index">
+      <image src="{{item.imgs}}" mode="widthFix"></image>
+      <view class="rank-con">
+        <text>{{item.num}} {{item.title}}</text>
+        <text>{{item.author}}</text>
+      </view> 
+    </view>
+    <view class="rank-more gery">查看更多</view>
+  </view>
+  <!-- 新书 -->
+  <view class="rank-up gery">
+    <image src="../../images/new.png" mode="widthFix"></image>
+    <view class="rank-list" wx:for="{{rank2}}" wx:key="index">
+      <image src="{{item.imgs}}" mode="widthFix"></image>
+      <view class="rank-con">
+        <text>{{item.num}} {{item.title}}</text>
+        <text>{{item.author}}</text>
+      </view> 
+    </view>
+    <view class="rank-more white">查看更多</view>
+  </view>
+  <!-- 总榜 -->
+  <view class="rank-up white">
+    <image src="../../images/all.png" mode="widthFix"></image>
+    <view class="rank-list" wx:for="{{rank3}}" wx:key="index">
+      <image src="{{item.imgs}}" mode="widthFix"></image>
+      <view class="rank-con">
+        <text>{{item.num}} {{item.title}}</text>
+        <text>{{item.author}}</text>
+      </view> 
+    </view>
+    <view class="rank-more gery">查看更多</view>
+  </view>
+</view>

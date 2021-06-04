@@ -1,4 +1,4 @@
-/* components/recomment/recomment.wxss */
+/* pages/recomment/recomment.wxss */
 /* 标题 */
 .rec-nav{
   margin-top: 30rpx;

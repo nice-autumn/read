@@ -1,51 +1,102 @@
 // pages/listen/listen.js
+const db=wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    lists1:[],
-    lists2:[],
-    lists3:[]
+    newbook:[],
+    life:[],
+    culture:[],
+    popular:[],
+    goodbook:[]
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData()
+    this.getGood()
+    this.getNew()
+    this.getBook()
   },
-  getData(){
+  getGood(){
     var that=this
-  wx.request({
-    url:'http://m.taoyuewenhua.com/ajax/book_mall?ctype=2&seed=7808',
-    data:{
-     
+ db.collection('morebooks').where({
+       tab:"文学"
+      }).get({
+        success:function(res){
+          console.log(res);
+          that.setData({
+            goodbook:res.data
+          })
+        },
+        fail:function(err){
+          console.log(err);
+        }
+      })
+  },
+  getNew(){
+    var that=this
+ db.collection('books').where({
+        _openid:"oAkjZ5Mo_aS5-wH9adRKJOs3fHiQ"
+      }).get({
+        success:function(res){
+          console.log(res);
+          that.setData({
+            newbook:res.data
+          })
+        },
+        fail:function(err){
+          console.log(err);
+        }
+      })
+  },
+  getBook(){
+       var that=this
+  //文学
+  db.collection('morebooks').where({
+    tab:'文学'
+  }).limit(3).get({
+    success:function(res){
+      console.log(res);
+      that.setData({
+        life:res.data
+      })
     },
-    methods:'GET',
-    success(res){
-      let list=res.data.data.channelList
-      for(var i=0;i<list.length;i++){
-        if(list[i].mcid==6){
-          that.setData({
-        lists1:list[i].bookList,
-         })
-         }else if(list[i].mcid==7){
-          that.setData({
-            lists2:list[i].bookList,
-             })
-        }else if(list[i].mcid==8){
-          that.setData({
-            lists3:list[i].bookList,
-             })
-            }
-      }
-    },
-    fail(err){
+    fail:function(err){
       console.log(err);
     }
   })
-  },
+   //历史
+   db.collection('morebooks').where({
+    tab:'历史'
+  }).get({
+    success:function(res){
+      console.log(res);
+      that.setData({
+        culture:res.data
+      })
+    },
+    fail:function(err){
+      console.log(err);
+    }
+  })
+   //流行
+   db.collection('morebooks').where({
+    tab:'流行'
+  }).get({
+    success:function(res){
+      console.log(res);
+      that.setData({
+        popular:res.data
+      })
+    },
+    fail:function(err){
+      console.log(err);
+    }
+  })
+},
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

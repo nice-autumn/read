@@ -12,7 +12,9 @@ Page({
      list:[],
      tabs:'',
      imgs:'',
-     content:''
+     content:'',
+     precent:'',
+     num:''
   },
 
   /**
@@ -62,7 +64,7 @@ Page({
        msg1:e.detail.value
     })
  },
- bindpriceInput(e){
+ bindpeopleInput(e){
   this.setData({
      msg2:e.detail.value
   })
@@ -82,16 +84,28 @@ bindconInput(e){
      content:e.detail.value
   })
 },
+bindvalInput(e){
+  this.setData({
+     precent:e.detail.value
+  })
+},
+bindnumInput(e){
+  this.setData({
+     num:e.detail.value
+  })
+},
   add(){
     var that=this
-    db.collection('books').add({
+    db.collection('morebooks').add({
       data:{
         title:that.data.msg,
         author:that.data.msg1,
         people:that.data.msg2,
         tab:that.data.tabs,
         imgs:that.data.imgs,
-        content:that.data.content
+        precent:that.data.precent,
+        num:that.data.num
+        // content:that.data.content
       }
     }).then(res=>{
       that.onLoad()

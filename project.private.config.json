@@ -77,6 +77,18 @@
           "pathName": "components/classify/classify",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "components/good/good",
+          "pathName": "components/good/good",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "components/rank/rank",
+          "pathName": "components/rank/rank",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -1,0 +1,43 @@
+/* components/rank/rank.wxss */
+.rank-up{
+  padding: 20rpx 30rpx;
+}
+.white{
+  background-color: #fff;
+}
+.gery{
+  background-color: #F6F6F6;
+}
+.rank-up image{
+   width: 400rpx;
+}
+.rank-list{
+  display: flex;
+  padding:20rpx 0;
+}
+.rank-list image{
+  width: 120rpx;
+}
+.rank-con{
+  margin: 30rpx;
+}
+.rank-con text{
+  display: block;
+  line-height: 50rpx;
+}
+.rank-con text:nth-child(1){
+  font-size: 30rpx;
+  font-weight:600;
+}
+.rank-con text:nth-child(2){
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+.rank-more{
+  text-align: center;
+  font-size: 30rpx;
+  padding: 20rpx 0;
+  margin: 30rpx 0;
+  border-radius: 20rpx;
+}

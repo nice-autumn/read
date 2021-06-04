@@ -4,8 +4,9 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "book-search":"../../components/search/search",
-    "book-recomment":"../../components/recomment/recomment",
     "new-book":"../../components/newbook/newbook",
-    "classify":"../../components/classify/classify"
+    "classify":"../../components/classify/classify",
+    "good-book":"../../components/good/good",
+    "rank-list":"../../components/rank/rank"
   }
 }

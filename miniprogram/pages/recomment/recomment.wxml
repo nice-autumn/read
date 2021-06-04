@@ -1,4 +1,4 @@
-<!--components/recomment/recomment.wxml-->
+<!--pages/recomment/recomment.wxml-->
 <view class="recommend" >
               <!--重磅推荐 -->
               <view class="rec-nav">
@@ -10,7 +10,7 @@
                     <image src="../../images/arrow.png" mode="widthFix"></image>
                   </view>
                 </view>  
-              <navigator class="rec-con" wx:for="{{listsRec}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
+              <navigator class="rec-con" wx:for="{{lists1}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
                 <view class="rec-img">
                   <image src="{{item.coverUrl}}" mode="widthFix"></image>
                 </view>
@@ -36,7 +36,7 @@
                     <image src="../../images/arrow.png" mode="widthFix"></image>
                   </view>
                 </view>  
-              <navigator class="rec-con" wx:for="{{listsNew}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
+              <navigator class="rec-con" wx:for="{{lists2}}" wx:key="index" open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
                 <view class="rec-img">
                   <image src="{{item.coverUrl}}" mode="widthFix"></image>
                 </view>
@@ -62,7 +62,7 @@
                     <image src="../../images/arrow.png" mode="widthFix"></image>
                   </view>
                 </view>  
-              <navigator class="rec-con" wx:for="{{listsGirl}}" wx:key="index"  open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
+              <navigator class="rec-con" wx:for="{{lists3}}" wx:key="index"  open-type="navigate" url="{{'../detail/detail?sourceName='+item.sourceName+'&sourceId='+item.sourceId}}">
                 <view class="rec-img">
                   <image src="{{item.coverUrl}}" mode="widthFix"></image>
                 </view>
@@ -79,3 +79,4 @@
                 </view>
               </navigator>
             </view>
+

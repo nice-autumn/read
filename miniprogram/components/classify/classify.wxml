@@ -1,10 +1,27 @@
 <!--components/classify/classify.wxml-->
 <view class="classify">
+  <!-- 精品小说榜 -->
   <view class="cla-list">
     <view class="cla-left">
       <text class="cla-title">精品小说榜</text>
-      <text class="cla-book">1.麻衣相师</text>
+      <text class="cla-book" wx:for="{{book1}}" wx:key="index">{{item.num}}.{{item.title}}</text>
     </view>
-    <image src="https://img1.doubanio.com/view/subject/s/public/s33667317.jpg" mode="widthFix"></image>
+    <image src="https://img2.doubanio.com/view/subject/s/public/s27943411.jpg" mode="widthFix"></image>
   </view>
+  <!-- 历史榜 -->
+  <view class="cla-list">
+    <view class="cla-left">
+      <text class="cla-title">历史榜</text>
+      <text class="cla-book" wx:for="{{book2}}" wx:key="index">{{item.num}}.{{item.title}}</text>
+    </view>
+    <image src="https://img2.doubanio.com/view/subject/s/public/s1076932.jpg" mode="widthFix"></image>
+  </view>
+  <!-- 流行榜 -->
+  <navigator  class="cla-list" open-type="navigate" url="{{'../../pages/recomment/recomment'}}" >
+    <view class="cla-left">
+      <text class="cla-title">流行榜</text>
+      <text class="cla-book" wx:for="{{book3}}" wx:key="index">{{item.num}}.{{item.title}}</text>
+    </view>
+    <image src="https://img1.doubanio.com/view/subject/s/public/s33620119.jpg" mode="widthFix"></image>
+  </navigator>
 </view>

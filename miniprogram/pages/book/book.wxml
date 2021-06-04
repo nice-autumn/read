@@ -1,21 +1,19 @@
 <!--pages/listen/listen.wxml-->
 <view class="listen">
-      <!-- <view class="search">
-        <image src="../../images/search.png" ></image>
-        <input type="text " class="search-book" placeholder="搜索"placeholder-class="placeholderStyle" />
-      </view> -->
       <book-search></book-search>
         <!-- tab切换 -->
         <van-tabs active="{{ active }}" bind:change="onChange" type="none" sticky="true"> 
           <van-tab title="推荐">
-            <book-recomment  listsRec="{{lists1}}" listsNew="{{lists2}}" listsGirl="{{lists3}}"></book-recomment>
+             <good-book good="{{goodbook}}"></good-book>
           </van-tab>
           <van-tab title="新书">
-            <new-book></new-book>
+            <new-book new="{{newbook}}"></new-book>
           </van-tab>
           <van-tab title="分类">
-            <classify></classify>
+            <classify book1="{{life}}" book2="{{culture}}" book3="{{popular}}"></classify>
           </van-tab>
-          <van-tab title="排行">排行</van-tab>
+          <van-tab title="排行">
+            <rank-list rank1="{{life}}" rank2="{{culture}}" rank3="{{popular}}"></rank-list>
+          </van-tab>
         </van-tabs>
 </view>

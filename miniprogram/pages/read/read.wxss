@@ -21,11 +21,14 @@
   margin-top: 20rpx;
   font-size: 38rpx;
 }
+.read-plan{
+  margin-top: 20rpx;
+}
 .read-len{
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 30rpx;
+  padding:30rpx;
   overflow: hidden;
 }
 .read-len .time{

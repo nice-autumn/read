@@ -1,10 +1,10 @@
 <!--components/newbook/newbook.wxml-->
 <view class="newbook">
-  <view class="new-list">
-    <image src="https://img1.doubanio.com/view/ark_article_cover/retina/public/312251718.jpg?v=1618561692" mode="widthFix"></image>
+  <view class="new-list" wx:for="{{new}}" wx:key="index">
+    <image src="{{item.imgs}}" mode="widthFix"></image>
     <view class="new-con">
-      <text class="new-title">做一个清醒的现代人</text>
-      <text class="new-author">刘擎 | 推荐值79.0%</text>
+      <text class="new-title">{{item.title}}</text>
+      <text class="new-author">{{item.author}}| 推荐值79.0%</text>
       <text class="new-intro">热门推荐</text>
     </view>
   </view>

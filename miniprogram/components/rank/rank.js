@@ -1,18 +1,18 @@
-// components/recomment/recomment.js
+// components/rank/rank.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-   listsRec:{
-     type: Object
-   },
-   listsNew:{
-     type:Object
-   },
-   listsGirl:{
-     type:Object
-   }
+    rank1:{
+      type:Object
+    },
+    rank2:{
+      type:Object
+    },
+    rank3:{
+      type:Object
+    }
   },
 
   /**

@@ -12,8 +12,12 @@
    <input placeholder="输入分类" auto-focus type="text" bindinput="bindtabInput" value="{{tabs}}"/> 
    images
    <input placeholder="输入图片" auto-focus type="text" bindinput="bindimgInput" value="{{imgs}}"/> 
-   内容
-   <input placeholder="输入文章" auto-focus type="text" bindinput="bindconInput" value="{{content}}"/> 
+   <!-- 内容
+   <input placeholder="输入文章" auto-focus type="text" bindinput="bindconInput" value="{{content}}"/>  -->
+   推荐值
+   <input placeholder="输入推荐值" auto-focus type="text" bindinput="bindvalInput" value="{{precent}}"/> 
+   num
+   <input placeholder="输入num" auto-focus type="text" bindinput="bindnumInput" value="{{num}}"/> 
 </view>
 <button type="primary" bindtap="add">添加数据</button>
 <button type="default" plain="true" bindtap="change">修改数据</button>

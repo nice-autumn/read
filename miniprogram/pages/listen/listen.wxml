@@ -7,7 +7,7 @@
       <navigator class="video" wx:for="{{book}}" wx:key="index" open-type="navigate" url="{{'../read/read?id='+item.title}}">
         <view class="video-img">
           <image src="{{item.imgs}}" mode="widthFix"></image>
-          <image class="img-play" src="../../images/play2.png" mode="widthFix"></image>
+          <!-- <image class="img-play" src="../../images/play2.png" mode="widthFix"></image> -->
         </view>
         <view class="video-title">
           <text class="names">{{item.title}}</text>
@@ -19,7 +19,7 @@
       <view class="video" wx:for="{{life}}" wx:key="index">
         <view class="video-img">
           <image src="{{item.imgs}}" mode="widthFix"></image>
-          <image class="img-play" src="../../images/play2.png" mode="widthFix"></image>
+          <!-- <image class="img-play" src="../../images/play2.png" mode="widthFix"></image> -->
         </view>
         <view class="video-title">
           <text class="names">{{item.title}}</text>
@@ -31,7 +31,7 @@
       <view class="video" wx:for="{{culture}}" wx:key="index">
         <view class="video-img">
           <image src="{{item.imgs}}" mode="widthFix"></image>
-          <image class="img-play" src="../../images/play2.png" mode="widthFix"></image>
+          <!-- <image class="img-play" src="../../images/play2.png" mode="widthFix"></image> -->
         </view>
         <view class="video-title">
           <text class="names">{{item.title}}</text>
@@ -43,7 +43,7 @@
       <view class="video" wx:for="{{popular}}" wx:key="index">
         <view class="video-img">
           <image src="{{item.imgs}}" mode="widthFix"></image>
-          <image class="img-play" src="../../images/play2.png" mode="widthFix"></image>
+          <!-- <image class="img-play" src="../../images/play2.png" mode="widthFix"></image> -->
         </view>
         <view class="video-title">
           <text class="names">{{item.title}}</text>

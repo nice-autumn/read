@@ -1,0 +1,18 @@
+<!--components/good/good.wxml-->
+<view class="good">
+  <view class="good-list" wx:for="{{good}}" wx:key="index">
+    <view class="good-intro">
+      <view class="good-num">{{item.num}}</view>
+       <image src="{{item.imgs}}" mode="widthFix"></image>
+    <view class="good-con">
+      <text class="good-title">{{item.title}}</text>
+      <text class="good-author">{{item.author}}</text>
+      <text class="pre">推荐值{{item.precent}}</text>
+    </view>
+    </view>
+    <view class="people">
+      <image src="../../images/my.svg" mode="widthFix"></image>
+      <text class="people-num">{{item.people}}</text>
+    </view>
+  </view>
+</view>
