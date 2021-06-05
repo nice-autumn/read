@@ -13,13 +13,45 @@ Page({
     contents:[],
     intro:'',
     show1:false,
-    show2:true
+    show2:true,
+    currentTimenew:'00:00',
+    currtRatenew:'00:00',
+    audioContext:'', 
   },
-
+    //以下是状态监听
+    audioError:function(resp){
+      console.log(resp);
+  },
+  audioPlay:function(resp){
+      console.log(resp);
+      console.log('开始播放');
+  },
+  playEnd:function(resp){
+      console.log(resp);
+      console.log('播放结束');
+  },
+  timeUpdate:function(resp){
+      this.setData({
+          currtRatenew:(resp.detail.duration)*1000,//总时长
+          currentTimenew:(resp.detail.currentTime)*1000
+      });
+      console.log(resp);
+      console.log('播放进度变化');
+  },
+  //快进
+  goFast:function(){
+    this.audioContext.seek((this.data.currentTimenew/1000)+15);
+  },
+  //后退
+  goSlow(){
+    this.audioContext.seek((this.data.currentTimenew/1000)-15);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 生命周期函数--监听页面加载
+    this.audioContext=wx.createAudioContext('audio');
     //数据查询
     var that=this
     that.setData({
@@ -56,6 +88,7 @@ wordYun:function (e) {
     show1:true,
     show2:false
   })
+  this.audioContext.play();
   plugin.textToSpeech({
     lang: "zh_CN",
     tts: true,
@@ -83,6 +116,7 @@ yuyinPlay: function (e) {
   }
   this.innerAudioContext.src = this.data.src //设置音频地址
   this.innerAudioContext.play(); //播放音频
+ 
 },
 
 // 结束语音
@@ -92,8 +126,9 @@ end: function (e) {
     show2:true
   })
   this.innerAudioContext.pause();//暂停音频
-
+  this.audioContext.pause();
 },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

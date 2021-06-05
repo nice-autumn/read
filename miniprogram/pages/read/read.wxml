@@ -1,4 +1,5 @@
 <!--pages/read/read.wxml-->
+<wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
 <view class="read" >
   <view wx:for="{{contents}}" wx:key="index"> 
     <view class="read-img">
@@ -6,14 +7,14 @@
   </view>
     <text class="read-title">{{item.title}}</text>
   </view>
-   
+    <audio id="audio" src="{{src}}" loop="{{true}}" controls="{{false}}" binderror="audioError" bindplay="audioPlay" bindeneded="playEnd" bindtimeupdate="timeUpdate"></audio>
     <view class="read-plan">
       <!-- 进度条 -->
       <view class="read-len">
-        <view class="time">-15s</view>
+        <view class="time" bindtap="goSlow">-15s</view>
         <view class="read-line"></view>
-        <view class="read-btn">00:00/11:55</view>
-        <view class="time">+15s</view>
+        <view class="read-btn">{{dateUtil.dateFormat(currentTimenew,'mm:ss')}}/{{dateUtil.dateFormat(currtRatenew,'mm:ss')}}</view>
+        <view class="time" bindtap="goFast">+15s</view>
       </view>
       <view class="read-bot">
         <view class="read-close">
@@ -32,9 +33,6 @@
         <view class="read-in">
           <view class="e-book">加入书架</view>
           <view class="e-book">阅读电子书</view>
-        </view>
-        <view class="comment">
-          <hot-comment></hot-comment>
         </view>
       </view>
     </view> 

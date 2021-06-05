@@ -1,4 +1,5 @@
 <!--components/comment/comment.wxml-->
+<wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
 <view class="det-hot">
     <view class="det-box"></view>
       <text class="con-intro">热门书评</text>
@@ -8,6 +9,6 @@
            <text class="hot-user">{{item.nickname}} 读过</text>
         </view>
         <text class="hot-con">{{item.content}}</text>
-        <text class="hot-time">{{item.times}}</text>
+        <text class="hot-time">{{dateUtil.dateFormat(item.createdOn,'yyyy-MM-dd')}}</text>
       </view>
   </view>

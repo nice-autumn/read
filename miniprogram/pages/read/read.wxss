@@ -1,5 +1,7 @@
 /* pages/read/read.wxss */
 .read{
+  padding-top: 40rpx;
+  height: 100vh;
   background-color: #fff;
 }
 .read-img{

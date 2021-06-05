@@ -1,5 +1,4 @@
 // pages/detail/detail.js
-var time = require('../../utils/utils.js');
 var that = ''
 
 Page({
@@ -36,17 +35,13 @@ Page({
       '&sourceId='+options.sourceId,
       method:'GET',
       success(res){
-        let times= []
         that.setData({
           comment:res.data.data,
         })
-        for(var i=0;i<that.data.comment.length;i++){
-          // times.push( time.formatTime(that.data.comment[i].createdOn, 'h:m'))
-          that.data.comment[i].times = time.formatTime(that.data.comment[i].createdOn, 'h:m')
-        }
         that.setData({
           comment:that.data.comment
         })
+        console.log(that.data.comment);
       },
       fail(err){
         console.log(err);
