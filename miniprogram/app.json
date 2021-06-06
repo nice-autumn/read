@@ -8,8 +8,7 @@
     "pages/menu/menu",
     "pages/add/add",
     "pages/read/read",
-    "pages/recomment/recomment",
-    "pages/tests/tests"
+    "pages/recomment/recomment"
   ],
   "window": {
     "backgroundColor": "#ffffff",
