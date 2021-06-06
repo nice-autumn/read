@@ -1,6 +1,6 @@
 <!--pages/read/read.wxml-->
 <wxs module="dateUtil" src="../../utils/timeUtil.wxs"></wxs>
-<view class="read" >
+<view class="read">
   <view wx:for="{{contents}}" wx:key="index"> 
     <view class="read-img">
     <image src="{{item.imgs}}" mode="widthFix"></image>
@@ -13,7 +13,7 @@
       <view class="read-len">
         <view class="time" bindtap="goSlow">-15s</view>
         <view class="read-line"></view>
-        <view class="read-btn">{{dateUtil.dateFormat(currentTimenew,'mm:ss')}}/{{dateUtil.dateFormat(currtRatenew,'mm:ss')}}</view>
+        <view class="read-btn">{{dateUtil.dateFormat(currentTime,'mm:ss')}}/{{dateUtil.dateFormat(currtRate,'mm:ss')}}</view>
         <view class="time" bindtap="goFast">+15s</view>
       </view>
       <view class="read-bot">

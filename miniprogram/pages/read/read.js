@@ -14,8 +14,8 @@ Page({
     intro:'',
     show1:false,
     show2:true,
-    currentTimenew:'00:00',
-    currtRatenew:'00:00',
+    currtRate:'00:00',
+    currentTime:'00:00',
     audioContext:'', 
   },
     //以下是状态监听
@@ -31,20 +31,23 @@ Page({
       console.log('播放结束');
   },
   timeUpdate:function(resp){
+    console.log(resp.detail);
       this.setData({
-          currtRatenew:(resp.detail.duration)*1000,//总时长
-          currentTimenew:(resp.detail.currentTime)*1000
+          currtRate:(resp.detail.duration)*1000,//总时长
+          currentTime:(resp.detail.currentTime)*1000 //当前时间
       });
       console.log(resp);
       console.log('播放进度变化');
   },
   //快进
-  goFast:function(){
-    this.audioContext.seek((this.data.currentTimenew/1000)+15);
+  goFast: function () {
+    this.audioContext.seek((this.data.currentTime/1000)+15);
+    console.log(this.data.currentTime/1000);
+    // this.audioContext.seek(14)
   },
   //后退
   goSlow(){
-    this.audioContext.seek((this.data.currentTimenew/1000)-15);
+    this.audioContext.seek((this.data.currentTime/1000)-15);
   },
   /**
    * 生命周期函数--监听页面加载
@@ -88,11 +91,11 @@ wordYun:function (e) {
     show1:true,
     show2:false
   })
-  this.audioContext.play();
   plugin.textToSpeech({
     lang: "zh_CN",
     tts: true,
     content: that.data.intro,
+    // content:'雨是最寻常的，一下就是三两天。可别恼。看，像牛毛，像花针，像细丝，密密地斜织着，人家屋顶上全笼着一层薄烟。树叶子却绿得发亮，小草也青得逼你的眼。傍晚时候，上灯了，一点点黄晕的光，烘托出一片安静而和平的夜。乡下去，小路上，石桥边，有撑起伞慢慢走着的人；还有地里工作的农夫，披着蓑，戴着笠的。他们的草屋，稀稀疏疏的，在雨里静默着。',
     success: function (res) {
       console.log(res);
       console.log("succ tts", res.filename);
@@ -100,7 +103,7 @@ wordYun:function (e) {
         src: res.filename
       })
       that.yuyinPlay();
-      console.log(that.data.intro);
+    console.log(that.data.intro);
     },
     fail: function (res) {
       console.log("fail tts", res)
@@ -115,8 +118,8 @@ yuyinPlay: function (e) {
     return;
   }
   this.innerAudioContext.src = this.data.src //设置音频地址
-  this.innerAudioContext.play(); //播放音频
- 
+  // this.innerAudioContext.play(); //播放音频
+  this.audioContext.play()
 },
 
 // 结束语音
@@ -125,7 +128,7 @@ end: function (e) {
     show1:false,
     show2:true
   })
-  this.innerAudioContext.pause();//暂停音频
+  // this.innerAudioContext.pause();//暂停音频
   this.audioContext.pause();
 },
 

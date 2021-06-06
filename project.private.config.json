@@ -89,6 +89,11 @@
           "pathName": "components/rank/rank",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/tests/tests",
+          "pathName": "pages/tests/tests",
+          "scene": null
         }
       ]
     }
