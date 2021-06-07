@@ -1,4 +1,4 @@
-// pages/read/read.
+
 const db=wx.cloud.database();
 const app = getApp();
 //引入插件：微信同声传译
@@ -36,8 +36,8 @@ Page({
           currtRate:(resp.detail.duration)*1000,//总时长
           currentTime:(resp.detail.currentTime)*1000 //当前时间
       });
-      console.log(resp);
-      console.log('播放进度变化');
+      // console.log(resp);
+      // console.log('播放进度变化');
   },
   //快进
   goFast: function () {
@@ -77,7 +77,6 @@ Page({
        //创建内部 audio 上下文 InnerAudioContext 对象。
     this.innerAudioContext = wx.createInnerAudioContext();
     this.innerAudioContext.onError(function (res) {
-      console.log(res);
       wx.showToast({
         title: '语音播放失败',
         icon: 'none',
@@ -95,15 +94,12 @@ wordYun:function (e) {
     lang: "zh_CN",
     tts: true,
     content: that.data.intro,
-    // content:'雨是最寻常的，一下就是三两天。可别恼。看，像牛毛，像花针，像细丝，密密地斜织着，人家屋顶上全笼着一层薄烟。树叶子却绿得发亮，小草也青得逼你的眼。傍晚时候，上灯了，一点点黄晕的光，烘托出一片安静而和平的夜。乡下去，小路上，石桥边，有撑起伞慢慢走着的人；还有地里工作的农夫，披着蓑，戴着笠的。他们的草屋，稀稀疏疏的，在雨里静默着。',
     success: function (res) {
-      console.log(res);
       console.log("succ tts", res.filename);
       that.setData({
         src: res.filename
       })
       that.yuyinPlay();
-    console.log(that.data.intro);
     },
     fail: function (res) {
       console.log("fail tts", res)

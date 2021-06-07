@@ -17,6 +17,42 @@
   font-size: 38rpx;
   color: #666;
 }
+.read-intro{
+  display: flex;
+  justify-content: space-between;
+  width: 400rpx;
+  margin: 30rpx auto;
+}
+.read-frame{
+  display: flex;
+  border-radius: 40rpx;
+  padding: 10rpx 20rpx;
+  background-color:#F6F6F6;
+}
+.read-name{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+
+.read-frame image{
+  width:60rpx;
+  border-radius: 50%;
+}
+.cycle{
+  margin-top: 10rpx;
+ width: 70rpx;
+ height: 70rpx;
+ text-align: center;
+ background-color: #f6f6f6;
+ border-radius: 50%;
+ 
+}
+.cycle image{
+  margin-top: 12rpx;
+  width: 45rpx;  
+}
 .read-chap{
   display: block;
   text-align: center;
@@ -24,7 +60,7 @@
   font-size: 38rpx;
 }
 .read-plan{
-  margin-top: 20rpx;
+  margin-top: -40rpx;
 }
 .read-len{
   position: relative;

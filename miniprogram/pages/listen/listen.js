@@ -25,7 +25,6 @@ Page({
     tab:'文学'
   }).get({
     success:function(res){
-      console.log(res);
       that.setData({
         book:res.data
       })
@@ -39,7 +38,6 @@ db.collection('books').where({
   tab:'生活'
 }).get({
   success:function(res){
-    console.log(res);
     that.setData({
       life:res.data
     })
@@ -53,7 +51,6 @@ db.collection('books').where({
   tab:'文化'
 }).get({
   success:function(res){
-    console.log(res);
     that.setData({
       culture:res.data
     })
@@ -67,7 +64,6 @@ db.collection('books').where({
   tab:'流行'
 }).get({
   success:function(res){
-    console.log(res);
     that.setData({
       popular:res.data
     })

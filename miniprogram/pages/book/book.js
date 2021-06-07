@@ -26,7 +26,6 @@ Page({
        tab:"文学"
       }).get({
         success:function(res){
-          console.log(res);
           that.setData({
             goodbook:res.data
           })
@@ -42,7 +41,6 @@ Page({
         _openid:"oAkjZ5Mo_aS5-wH9adRKJOs3fHiQ"
       }).get({
         success:function(res){
-          console.log(res);
           that.setData({
             newbook:res.data
           })
@@ -59,7 +57,6 @@ Page({
     tab:'文学'
   }).limit(3).get({
     success:function(res){
-      console.log(res);
       that.setData({
         life:res.data
       })
@@ -73,7 +70,6 @@ Page({
     tab:'历史'
   }).get({
     success:function(res){
-      console.log(res);
       that.setData({
         culture:res.data
       })
@@ -87,7 +83,6 @@ Page({
     tab:'流行'
   }).get({
     success:function(res){
-      console.log(res);
       that.setData({
         popular:res.data
       })

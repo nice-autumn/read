@@ -29,6 +29,7 @@
       </navigator>
       <view class="lis-title">文化榜</view>
       <navigator class="video" wx:for="{{culture}}" wx:key="index" wx:key="index" open-type="navigate" url="{{'../read/read?id='+item.title}}">
+       
         <view class="video-img">
           <image src="{{item.imgs}}" mode="widthFix"></image>
           <!-- <image class="img-play" src="../../images/play2.png" mode="widthFix"></image> -->
