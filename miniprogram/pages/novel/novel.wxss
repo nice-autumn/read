@@ -1,6 +1,6 @@
 /* pages/novel/novel.wxss */
 .novel{
-  background-color:#F0EBE2 ;
+  background-color:#F8F8FA ;
 }
 .nov-title{
    width: 100%;
