@@ -6,7 +6,24 @@
     <image src="{{item.imgs}}" mode="widthFix"></image>
   </view>
     <text class="read-title">{{item.title}}</text>
-    <view class="read-intro">
+    <view class="recomment">
+      <view class="box">
+        <view class="box-con">
+           <image src="../../images/smile.svg" mode="widthFix"></image>
+        <text>好看</text>
+        </view>
+       <view class="box-con">
+         <image src="../../images/so.svg" mode="widthFix"></image>
+         <text>一般</text>
+       </view>
+        <view class="box-con">
+          <image src="../../images/cry.svg" mode="widthFix"></image>
+          <text>不行</text>
+        </view>
+      </view>
+      <view class="read-go">去app阅读本书</view>
+    </view>
+    <!-- <view class="read-intro">
       <view class="read-frame">
         <image src="../../images/1.jpg" mode="widthFix"></image>
         <view class="read-name">华章有声读物</view>
@@ -14,22 +31,21 @@
       <view class="cycle">
         <image src="../../images/cycle.png" mode="widthFix"></image>
       </view>
-      </view>
+      </view> -->
     </view>
-    <audio id="audio" src="{{src}}" loop="{{true}}" controls="{{false}}" binderror="audioError" bindplay="audioPlay" bindeneded="playEnd" bindtimeupdate="timeUpdate"></audio>
-    <view class="read-plan">
+    <!-- <audio id="audio" src="{{src}}" loop="{{true}}" controls="{{false}}" binderror="audioError" bindplay="audioPlay" bindeneded="playEnd" bindtimeupdate="timeUpdate"></audio>
+    <view class="read-plan"> -->
       <!-- 进度条 -->
-      <view class="read-len">
+      <!-- <view class="read-len">
         <view class="time" bindtap="goSlow">-15s</view>
         <view class="read-line"></view>
         <view class="read-btn">{{dateUtil.dateFormat(currentTime,'mm:ss')}}/{{dateUtil.dateFormat(currtRate,'mm:ss')}}</view>
         <view class="time" bindtap="goFast">+15s</view>
-      </view>
-      <view class="read-bot">
+      </view> -->
+      <!-- <view class="read-bot">
         <view class="read-close">
           <view class="clock">
              <image src="../../images/clock.png" mode="widthFix"></image>
-             <!-- <text>定时关闭</text> -->
           </view>
           <image src="../../images/last.png" mode="widthFix"></image>
           <van-dialog id="van-dialog" />
@@ -45,5 +61,9 @@
           <view class="e-book">阅读电子书</view>
         </view>
     </view> 
-</view>
+  </view>-->
+  <view class="read-know">
+    <text>书籍简介</text>
+    <text>{{intro}}</text>
+  </view>
 </view>

@@ -6,7 +6,6 @@
     "pages/detail/detail",
     "pages/novel/novel",
     "pages/menu/menu",
-    "pages/add/add",
     "pages/read/read",
     "pages/recomment/recomment",
     "pages/new/new"
@@ -31,7 +30,7 @@
       },
       {
         "pagePath": "pages/listen/listen",
-        "text": "听书",
+        "text": "精选",
         "iconPath": "./images/listen.png",
         "selectedIconPath": "./images/select-listen.png"
         },

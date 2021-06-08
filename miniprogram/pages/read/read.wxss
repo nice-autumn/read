@@ -134,3 +134,44 @@
   border: 1px solid #eee;
   border-radius: 40rpx;
 }
+/* 修改 */
+.recomment{
+ padding: 30rpx;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+.box-con{
+  display: flex;
+  padding: 14rpx 60rpx;
+  border-radius: 10rpx;
+  background-color: #eee;
+}
+.box-con image{
+  width: 40rpx;
+}
+.box-con text{
+  line-height: 40rpx;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.read-go{
+  margin: 30rpx 0 0 0;
+  padding: 24rpx 0;
+  text-align: center;
+  border-radius: 20rpx;
+  background-color: #009DF6;
+  font-size: 28rpx;
+  color: #fff;
+}
+.read-know{
+  padding: 0 30rpx;
+}
+.read-know text{
+display: flex;
+font-size: 30rpx;
+line-height: 50rpx;
+color: #999;
+}
