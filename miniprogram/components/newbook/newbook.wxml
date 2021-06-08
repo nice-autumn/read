@@ -1,11 +1,11 @@
 <!--components/newbook/newbook.wxml-->
 <view class="newbook">
-  <view class="new-list" wx:for="{{new}}" wx:key="index">
+  <navigator class="new-list" wx:for="{{new}}" wx:key="index" open-type="navigate" url="{{'../new/new?title='+item.title+'&author='+item.author+'&imgs='+item.imgs}}">
     <image src="{{item.imgs}}" mode="widthFix"></image>
     <view class="new-con">
       <text class="new-title">{{item.title}}</text>
       <text class="new-author">{{item.author}}| 推荐值79.0%</text>
       <text class="new-intro">热门推荐</text>
-    </view>
   </view>
+</navigator>
 </view>

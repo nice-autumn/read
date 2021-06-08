@@ -1,21 +1,21 @@
 <!--components/classify/classify.wxml-->
 <view class="classify">
   <!-- 精品小说榜 -->
-  <view class="cla-list">
+  <navigator class="cla-list" open-type="navigate" url="{{'../../pages/recomment/recomment'}}">
     <view class="cla-left">
       <text class="cla-title">精品小说榜</text>
       <text class="cla-book" wx:for="{{book1}}" wx:key="index">{{item.num}}.{{item.title}}</text>
-    </view>
+      </view>
     <image src="https://img2.doubanio.com/view/subject/s/public/s27943411.jpg" mode="widthFix"></image>
-  </view>
+</navigator>
   <!-- 历史榜 -->
-  <view class="cla-list">
+  <navigator class="cla-list" open-type="navigate" url="{{'../../pages/recomment/recomment'}}">
     <view class="cla-left">
       <text class="cla-title">历史榜</text>
       <text class="cla-book" wx:for="{{book2}}" wx:key="index">{{item.num}}.{{item.title}}</text>
     </view>
     <image src="https://img2.doubanio.com/view/subject/s/public/s1076932.jpg" mode="widthFix"></image>
-  </view>
+ </navigator>
   <!-- 流行榜 -->
   <navigator  class="cla-list" open-type="navigate" url="{{'../../pages/recomment/recomment'}}" >
     <view class="cla-left">

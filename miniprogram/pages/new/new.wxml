@@ -1,0 +1,35 @@
+
+<view class="new">
+  <view class="new-nav">
+    <image src="{{imgs}}" mode="widthFix"></image>
+    <view class="new-title">
+      <text class="new-name">{{title}}</text>
+      <text class="new-intro">{{author}}</text>
+      <view class="new-think">
+        <view class="new-same">想读</view>
+        <view class="new-same">在读</view>
+        <view class="new-same">读过</view>
+      </view>
+    </view>
+  </view>
+  <view class="new-price">
+    <text class="price-title">夕阳评分</text>
+    <view class="price-num">
+      <text>9.3</text>
+      <view class="star">
+        <van-rate class="star-position" value="{{ value }}" bind:change="onChange"
+    size="{{ 10 }}"
+         />
+        <text class="price-people">19人评分</text>
+      </view>
+    </view>
+  </view>
+  <view class="new-price buy">
+    <text>电子书/纸质购买</text>
+    <text>83.00起</text>
+  </view>
+  <view class="know">
+    <text>简介</text>
+    <text>散落的软骨碎片和酶对膝盖疼痛的影响几乎可以忽略不计。膝盖清创手术只是昂贵的“美容术”，掩盖了关节炎的主要诱因其实是肌无力和肥胖。通过锻炼和运动，每个人都能实际有效地保护膝盖；只要瘦下几斤，关节炎风险就会明显下降。即使膝盖关节已经磨损，“运动也是安全有效的治疗方案”一适当的训练有助于缓解关节疼痛，提高走路稳定性，改善生活质量。</text>
+  </view>
+</view>

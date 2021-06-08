@@ -1,0 +1,84 @@
+/* pages/new/new.wxss */
+.new{
+  padding: 30rpx;
+  height: 100vh;
+  background-color: rgb(127, 114, 117);
+}
+.new-nav{
+  display: flex;
+}
+.new-nav image{
+  width: 180rpx;
+}
+.new-title text{
+  display: block;
+  line-height: 70rpx;
+}
+.new-title{
+  margin-left: 30rpx;
+}
+.new-name{
+  font-size:40rpx;
+  color: #fff;
+}
+.new-think{
+  margin-top: 30rpx;
+  display: flex;
+}
+.new-intro{
+  font-size: 30rpx;
+  color: #eee;
+}
+.new-same{
+  padding: 10rpx 20rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.new-price{
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+    color: #fff;
+  background-color:rgba(0,0,0,0.1);
+}
+.new-price text{
+  display: block;
+}
+.price-title{
+  padding: 20rpx;
+  font-size: 30rpx;
+}
+.price-num{
+  display: flex;
+}
+.price-num text:nth-child(1){
+  padding: 20rpx;
+  font-size: 70rpx;
+  margin-top: -24rpx;
+  font-weight: bold;
+}
+.price-people{
+  font-size: 24rpx;
+}
+.buy{
+  padding: 20rpx 30rpx;
+  display: flex;
+  font-size: 30rpx;
+  justify-content: space-between;
+}
+.know{
+  margin: 20rpx;
+}
+.know text{
+  display: block;
+}
+.know text:nth-child(1){
+  color: #fff;
+  font-size: 30rpx;
+}
+.know text:nth-child(2){
+  margin-top: 20rpx;
+  color: #fff;
+}

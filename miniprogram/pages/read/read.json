@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "hot-comment":"../../components/comment/comment"
+    "hot-comment":"../../components/comment/comment",
+    "van-dialog": "@vant/weapp/dialog/index"
   }
 }

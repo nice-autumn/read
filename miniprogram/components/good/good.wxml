@@ -1,6 +1,6 @@
 <!--components/good/good.wxml-->
 <view class="good">
-  <view class="good-list" wx:for="{{good}}" wx:key="index">
+  <navigator class="good-list" wx:for="{{good}}" wx:key="index" wx:key="index" open-type="navigate" url="{{'../new/new?title='+item.title+'&author='+item.author+'&imgs='+item.imgs}}">
     <view class="good-intro">
       <view class="good-num">{{item.num}}</view>
        <image src="{{item.imgs}}" mode="widthFix"></image>
@@ -14,5 +14,5 @@
       <image src="../../images/my.svg" mode="widthFix"></image>
       <text class="people-num">{{item.people}}</text>
     </view>
-  </view>
+  </navigator>
 </view>

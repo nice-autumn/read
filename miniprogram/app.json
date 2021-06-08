@@ -8,7 +8,8 @@
     "pages/menu/menu",
     "pages/add/add",
     "pages/read/read",
-    "pages/recomment/recomment"
+    "pages/recomment/recomment",
+    "pages/new/new"
   ],
   "window": {
     "backgroundColor": "#ffffff",
@@ -42,11 +43,5 @@
           }
     ]
   },
-  "sitemapLocation": "sitemap.json",
-  "plugins": {
-    "WechatSI": {
-      "version": "0.3.4",
-      "provider": "wx069ba97219f66d99"
-    }
-  }
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,8 +1,9 @@
 
 const db=wx.cloud.database();
 const app = getApp();
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
 //引入插件：微信同声传译
-const plugin = requirePlugin('WechatSI');
+// const plugin = requirePlugin('WechatSI');
 Page({
 
   /**
@@ -18,6 +19,7 @@ Page({
     currentTime:'00:00',
     audioContext:'', 
   },
+  
     //以下是状态监听
     audioError:function(resp){
       console.log(resp);
@@ -84,50 +86,57 @@ Page({
     }) 
   },
 // 文字转语音
-wordYun:function (e) {
-  var that = this;
-  this.setData({
-    show1:true,
-    show2:false
-  })
-  plugin.textToSpeech({
-    lang: "zh_CN",
-    tts: true,
-    content: that.data.intro,
-    success: function (res) {
-      console.log("succ tts", res.filename);
-      that.setData({
-        src: res.filename
-      })
-      that.yuyinPlay();
-    },
-    fail: function (res) {
-      console.log("fail tts", res)
-    }
-  })
-},
+// wordYun:function (e) {
+//   var that = this;
+//   this.setData({
+//     show1:true,
+//     show2:false
+//   })
+//   plugin.textToSpeech({
+//     lang: "zh_CN",
+//     tts: true,
+//     content: that.data.intro,
+//     success: function (res) {
+//       console.log("succ tts", res.filename);
+//       that.setData({
+//         src: res.filename
+//       })
+//       that.yuyinPlay();
+//     },
+//     fail: function (res) {
+//       console.log("fail tts", res)
+//     }
+//   })
+// },
 
-//播放语音
-yuyinPlay: function (e) {
-  if (this.data.src == '') {
-    console.log(暂无语音);
-    return;
-  }
-  this.innerAudioContext.src = this.data.src //设置音频地址
-  // this.innerAudioContext.play(); //播放音频
-  this.audioContext.play()
-},
+// //播放语音
+// yuyinPlay: function (e) {
+//   if (this.data.src == '') {
+//     console.log(暂无语音);
+//     return;
+//   }
+//   this.innerAudioContext.src = this.data.src //设置音频地址
+//   // this.innerAudioContext.play(); //播放音频
+//   this.audioContext.play()
+// },
 
 // 结束语音
-end: function (e) {
-  this.setData({
-    show1:false,
-    show2:true
-  })
-  // this.innerAudioContext.pause();//暂停音频
-  this.audioContext.pause();
+// end: function (e) {
+  // this.setData({
+  //   show1:false,
+  //   show2:true
+  // })
+  // // this.innerAudioContext.pause();//暂停音频
+  // this.audioContext.pause();
+// },
+wordYun(){
+   Dialog.alert({
+    message: '请前往app体现完整功能',
+    theme: 'round-button',
+  }).then(() => {
+    // on close
+  });
 },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
