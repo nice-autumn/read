@@ -19,7 +19,7 @@ Page({
   getData(){
     var that=this
   wx.request({
-    url:'http://m.taoyuewenhua.com/ajax/book_mall?ctype=2&seed=7808',
+    url:'https://m.taoyuewenhua.com/ajax/book_mall?ctype=2&seed=7808',
     data:{
      
     },

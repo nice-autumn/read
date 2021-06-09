@@ -18,7 +18,7 @@ Page({
   onLoad: function (options) {
     that=this
     wx.request({
-      url: 'http://m.taoyuewenhua.com/ajax/book?sourceName='+options.sourceName+
+      url: 'https://m.taoyuewenhua.com/ajax/book?sourceName='+options.sourceName+
       '&sourceId='+options.sourceId,
       method:'GET',
       success(res){
@@ -31,7 +31,7 @@ Page({
       }
     }),
     wx.request({
-      url: 'http://m.taoyuewenhua.com/ajax/top_comments?sourceName='+options.sourceName+
+      url: 'https://m.taoyuewenhua.com/ajax/top_comments?sourceName='+options.sourceName+
       '&sourceId='+options.sourceId,
       method:'GET',
       success(res){
@@ -41,7 +41,7 @@ Page({
         that.setData({
           comment:that.data.comment
         })
-        console.log(that.data.comment);
+        // console.log(that.data.comment);
       },
       fail(err){
         console.log(err);
