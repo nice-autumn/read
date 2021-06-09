@@ -28,7 +28,7 @@ Page({
   getMenu(){
     var that=this
     wx.request({
-      url: 'http://m.taoyuewenhua.com/ajax/chapters?sourceName='+that.data.names+
+      url: 'https://m.taoyuewenhua.com/ajax/chapters?sourceName='+that.data.names+
       '&sourceId='+that.data.id+'&chapterId='+that.data.id1,
       method:'GET',
       success(res){

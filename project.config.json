@@ -4,13 +4,13 @@
   "setting": {
     "urlCheck": true,
     "es6": true,
-    "enhance": true,
-    "postcss": true,
+    "enhance": false,
+    "postcss": false,
     "preloadBackgroundData": false,
-    "minified": true,
+    "minified": false,
     "newFeature": true,
     "coverView": true,
-    "nodeModules": true,
+    "nodeModules": false,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -40,7 +40,7 @@
         "miniprogramNpmDistDir": "./miniprogram/"
       }
     ],
-    "minifyWXSS": true
+    "minifyWXSS": false
   },
   "appid": "wx05b422a36d89069c",
   "projectname": "wechat-read",

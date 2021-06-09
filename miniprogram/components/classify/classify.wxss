@@ -11,7 +11,7 @@
   background-color: #F8F8FA;
 }
 .cla-left{
-  margin: 40rpx;
+  margin: 30rpx;
 }
 .cla-list .cla-left text{
   display: block;
@@ -26,5 +26,5 @@
   color: #999;
 }
 .cla-list image{
-  width: 200rpx;
+  width: 220rpx;
 }
