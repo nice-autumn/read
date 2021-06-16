@@ -1,0 +1,169 @@
+/* pages/change/change.wxss */
+/* pages/read/read.wxss */
+.read{
+  padding-top: 40rpx;
+  height: 100vh;
+  background-color: #fff;
+}
+.read-img{
+  width: 300rpx;
+  margin: 30rpx auto;
+}
+.read-img image{
+  width: 300rpx;
+}
+.read-title{
+  text-align: center;
+  display: block;
+  font-size: 38rpx;
+  color: #666;
+}
+.read-intro{
+  display: flex;
+  justify-content: space-between;
+  width: 400rpx;
+  margin: 30rpx auto;
+}
+.read-frame{
+  display: flex;
+  border-radius: 40rpx;
+  padding: 10rpx 20rpx;
+  background-color:#F6F6F6;
+}
+.read-name{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 20rpx;
+}
+
+.read-frame image{
+  width:60rpx;
+  border-radius: 50%;
+}
+.cycle{
+  margin-top: 10rpx;
+ width: 70rpx;
+ height: 70rpx;
+ text-align: center;
+ background-color: #f6f6f6;
+ border-radius: 50%;
+ 
+}
+.cycle image{
+  margin-top: 12rpx;
+  width: 45rpx;  
+}
+.read-chap{
+  display: block;
+  text-align: center;
+  margin-top: 20rpx;
+  font-size: 38rpx;
+}
+.read-plan{
+  margin-top: -20px;
+}
+.read-len{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding:30rpx;
+  overflow: hidden;
+}
+.body-view{
+  width: 80%;
+  margin-top: -5px;
+}
+.read-len .time{
+  font-size: 36rpx;
+  color: rgb(129, 127, 127);
+}
+.read-line{
+  position: absolute;
+  left: 120rpx;
+  top: 54rpx;
+  width: 65%;
+  height: 4rpx;
+  background-color: #eee;
+}
+
+.read-close{
+  display: flex;
+  justify-content: space-between;
+  padding:40rpx 30rpx;
+}
+.read-close image{
+  width: 60rpx;
+}
+.read-close .clock text{
+  display: block;
+  font-size: 30rpx;
+  text-align: center;
+  color: #999;
+}
+.read-close .clock image{
+  margin-left: 26rpx;
+}
+.read-close .play{
+  margin-top: -38rpx;
+  width: 120rpx;
+  display: none;
+  margin-left: -10rpx;
+}
+.read-close .active{
+  display: block;
+}
+.read-in{
+  display: flex;
+  padding: 0 0 60rpx 0;
+  margin-left: 150rpx;
+}
+.read-in .e-book{
+  margin-left: 30rpx;
+  font-size: 34rpx;
+  color: #666;
+  padding: 20rpx 30rpx;
+  border: 1px solid #eee;
+  border-radius: 40rpx;
+}
+/* 修改 */
+.recomment{
+ padding: 30rpx;
+}
+.box{
+  display: flex;
+  justify-content: space-between;
+}
+.box-con{
+  display: flex;
+  padding: 14rpx 60rpx;
+  border-radius: 10rpx;
+  background-color: #eee;
+}
+.box-con image{
+  width: 40rpx;
+}
+.box-con text{
+  line-height: 40rpx;
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.read-go{
+  margin: 30rpx 0 0 0;
+  padding: 24rpx 0;
+  text-align: center;
+  border-radius: 20rpx;
+  background-color: #009DF6;
+  font-size: 28rpx;
+  color: #fff;
+}
+.read-know{
+  padding: 0 30rpx;
+}
+.read-know text{
+display: flex;
+font-size: 30rpx;
+line-height: 50rpx;
+color: #999;
+}

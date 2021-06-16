@@ -2,8 +2,6 @@
 const db=wx.cloud.database();
 const app = getApp();
 import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
-//引入插件：微信同声传译
-// const plugin = requirePlugin('WechatSI');
 Page({
 
   /**
@@ -15,42 +13,8 @@ Page({
     intro:'',
     show1:false,
     show2:true,
-    currtRate:'00:00',
-    currentTime:'00:00',
-    audioContext:'', 
   },
   
-    //以下是状态监听
-    audioError:function(resp){
-      console.log(resp);
-  },
-  audioPlay:function(resp){
-      console.log(resp);
-      console.log('开始播放');
-  },
-  playEnd:function(resp){
-      console.log(resp);
-      console.log('播放结束');
-  },
-  timeUpdate:function(resp){
-    console.log(resp.detail);
-      this.setData({
-          currtRate:(resp.detail.duration)*1000,//总时长
-          currentTime:(resp.detail.currentTime)*1000 //当前时间
-      });
-      // console.log(resp);
-      // console.log('播放进度变化');
-  },
-  //快进
-  goFast: function () {
-    this.audioContext.seek((this.data.currentTime/1000)+15);
-    console.log(this.data.currentTime/1000);
-    // this.audioContext.seek(14)
-  },
-  //后退
-  goSlow(){
-    this.audioContext.seek((this.data.currentTime/1000)-15);
-  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -76,59 +40,7 @@ Page({
         }
       })
       console.log(that.data.intro);
-       //创建内部 audio 上下文 InnerAudioContext 对象。
-    this.innerAudioContext = wx.createInnerAudioContext();
-    this.innerAudioContext.onError(function (res) {
-      wx.showToast({
-        title: '语音播放失败',
-        icon: 'none',
-      })
-    }) 
   },
-// 文字转语音
-// wordYun:function (e) {
-//   var that = this;
-//   this.setData({
-//     show1:true,
-//     show2:false
-//   })
-//   plugin.textToSpeech({
-//     lang: "zh_CN",
-//     tts: true,
-//     content: that.data.intro,
-//     success: function (res) {
-//       console.log("succ tts", res.filename);
-//       that.setData({
-//         src: res.filename
-//       })
-//       that.yuyinPlay();
-//     },
-//     fail: function (res) {
-//       console.log("fail tts", res)
-//     }
-//   })
-// },
-
-// //播放语音
-// yuyinPlay: function (e) {
-//   if (this.data.src == '') {
-//     console.log(暂无语音);
-//     return;
-//   }
-//   this.innerAudioContext.src = this.data.src //设置音频地址
-//   // this.innerAudioContext.play(); //播放音频
-//   this.audioContext.play()
-// },
-
-// 结束语音
-// end: function (e) {
-  // this.setData({
-  //   show1:false,
-  //   show2:true
-  // })
-  // // this.innerAudioContext.pause();//暂停音频
-  // this.audioContext.pause();
-// },
 wordYun(){
    Dialog.alert({
     message: '请前往app体现完整功能',

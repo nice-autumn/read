@@ -99,6 +99,12 @@
         {
           "name": "pages/new/new",
           "pathName": "pages/new/new",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/change/change",
+          "pathName": "pages/change/change",
           "scene": null
         }
       ]
