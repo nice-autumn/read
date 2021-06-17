@@ -40,8 +40,8 @@
           </view>
         </view>
         <view class="read-in">
-          <navigator class="e-book" open-type="navigate" wx:for="{{contents}}" wx:key="index" url="{{'../listen/listen?id='+item.title}}">
-            查看更多</navigator>
+          <view class="e-book" bindtap="back">
+            查看更多</view>
           <van-dialog id="van-dialog" />
           <view class="e-book" bindtap="play">阅读电子书</view>
         </view>

@@ -16,9 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getGood()
-    // this.getNew()
-    // this.getBook()
+    this.getGood()
+    this.getNew()
+    this.getBook()
   },
   getGood(){
     var that=this

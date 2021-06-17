@@ -68,24 +68,24 @@ Page({
     // 生命周期函数--监听页面加载
     this.audioContext=wx.createAudioContext('audio');
     //数据查询
-    // var that=this
-    // that.setData({
-    //   books:options.id
-    // })
-    // db.collection('books').where({
-    //     title:that.data.books
-    //   }).get({
-    //     success:function(res){
-    //       that.setData({
-    //         contents:res.data,
-    //         intro:res.data[0].content
-    //       })
-    //     },
-    //     fail:function(err){
-    //       console.log(err);
-    //     }
-    //   })
-    //   console.log(that.data.intro);
+    var that=this
+    that.setData({
+      books:options.id
+    })
+    db.collection('books').where({
+        title:that.data.books
+      }).get({
+        success:function(res){
+          that.setData({
+            contents:res.data,
+            intro:res.data[0].content
+          })
+        },
+        fail:function(err){
+          console.log(err);
+        }
+      })
+      console.log(that.data.intro);
        //创建内部 audio 上下文 InnerAudioContext 对象。
     this.innerAudioContext = wx.createInnerAudioContext();
     this.innerAudioContext.onError(function (res) {
@@ -147,6 +147,11 @@ play(){
   }).then(() => {
     // on close
   });
+},
+back(){
+ wx.navigateBack({
+   delta: 1,
+ })
 },
   /**
    * 生命周期函数--监听页面初次渲染完成
